@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { PostagemComponent } from './componentes/postagens/postagem/postagem.component';
 import { ExcluirPostagemComponent } from './componentes/postagens/excluir-postagem/excluir-postagem.component';
 import { EditarPostagemComponent } from './componentes/postagens/editar-postagem/editar-postagem.component';
+import { EntrarComponent } from './componentes/entrar/entrar.component';
+import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { EditarPostagemComponent } from './componentes/postagens/editar-postagem
     ListarPostagemComponent,
     PostagemComponent,
     ExcluirPostagemComponent,
-    EditarPostagemComponent
+    EditarPostagemComponent,
+    EntrarComponent,
+    CadastrarComponent
   ],
   imports: [
     BrowserModule,
