@@ -1,3 +1,4 @@
+import { HomeModule } from './componentes/entrar/home.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -25,14 +26,14 @@ import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component'
     PostagemComponent,
     ExcluirPostagemComponent,
     EditarPostagemComponent,
-    EntrarComponent,
     CadastrarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

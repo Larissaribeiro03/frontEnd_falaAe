@@ -1,3 +1,4 @@
+import { EntrarComponent } from './componentes/entrar/entrar.component';
 import { EditarPostagemComponent } from './componentes/postagens/editar-postagem/editar-postagem.component';
 import { ExcluirPostagemComponent } from './componentes/postagens/excluir-postagem/excluir-postagem.component';
 import { CriarPostagemComponent } from './componentes/postagens/criar-postagem/criar-postagem.component';
@@ -6,10 +7,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListarPostagemComponent } from './componentes/postagens/listar-postagem/listar-postagem.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'listarPostagem',
+  //   pathMatch: 'full'
+  // },
   {
     path: '',
-    redirectTo: 'listarPostagem',
-    pathMatch: 'full'
+    component: EntrarComponent
   },
   {
     path: 'criarPostagem',
