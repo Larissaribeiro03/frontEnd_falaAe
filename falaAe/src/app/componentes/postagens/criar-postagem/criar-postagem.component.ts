@@ -1,3 +1,4 @@
+import { UserLogin } from './../postagem/userLogin';
 import { PensamentoService } from './../pensamento.service';
 import { Pensamento } from './../postagem/postagem';
 import { Component, OnInit } from '@angular/core';
@@ -10,13 +11,19 @@ import { Router } from '@angular/router';
 })
 export class CriarPostagemComponent {
 
+  user: UserLogin = {
+    id: 1
+  }
+
   pensamento: Pensamento = {
-    id: 1,
-    post: ''
+    post: '',
+    user: this.user
+    // user: Map
     // conteudo: '',
     // autoria: '',
     // modelo: 'modelo1'
   }
+
 
   constructor(
     private service: PensamentoService,

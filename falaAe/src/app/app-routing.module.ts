@@ -7,14 +7,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListarPostagemComponent } from './componentes/postagens/listar-postagem/listar-postagem.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'listarPostagem',
-  //   pathMatch: 'full'
-  // },
+
+  {path: '',
+   redirectTo: 'entrar',
+   pathMatch: 'full'
+  },
+  {
+    path: 'entrar',
+    component: EntrarComponent
+  },
   {
     path: '',
-    component: EntrarComponent
+    redirectTo: 'listarPostagem',
+    pathMatch: 'full'
   },
   {
     path: 'criarPostagem',

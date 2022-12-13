@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../auth/auth.service';
+import { PlatformDetectorService } from '../plataform-detector/plataform-detector.service';
 
 @Component({
   selector: 'app-entrar',
@@ -10,10 +12,13 @@ import { AuthService } from '../auth/auth.service';
 export class EntrarComponent implements OnInit{
 
   loginForm!: FormGroup;
+  @ViewChild('emailInput') emailInput!: ElementRef<HTMLInputElement>;
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router,
+    private platformDetectorService: PlatformDetectorService
   ) { }
 
   ngOnInit(): void {
@@ -26,17 +31,16 @@ export class EntrarComponent implements OnInit{
   login() {
     const email = this.loginForm.get('email')?.value;
     const senha = this.loginForm.get('senha')?.value;
-    console.log(email);
-    console.log(senha);
 
-    this.authService
-    .authenticate(email, senha)
+    this.authService.authenticate(email, senha)
     .subscribe(
-      () => console.log('Autenticado'),
+      () => this.router.navigate(['/listarPostagem']),
       err => {
         console.log(err);
         this.loginForm.reset();
-        alert('Senha inválida.');
+        this.platformDetectorService.isPlatformBrowser() &&
+          this.emailInput.nativeElement.focus();
+        alert('Senha inválida, tente novamente.');
       }
     );
   }

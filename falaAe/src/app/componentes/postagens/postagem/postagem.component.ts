@@ -1,3 +1,4 @@
+import { UserLogin } from './userLogin';
 import { Component, Input, OnInit } from '@angular/core';
 import { Pensamento } from './postagem';
 
@@ -8,15 +9,22 @@ import { Pensamento } from './postagem';
 })
 export class PostagemComponent implements OnInit {
 
+  @Input() user: UserLogin = {
+    id:1
+  }
+
   @Input() pensamento: Pensamento = {
     id: 0,
     //dataPost: this.pensamento.dataPost,
-    post:''
-
+    post:'',
+    user: this.user
+    // user: new Map<'id',1 >
     //conteudo: 'I love angular',
     //autoria: 'Larissa',
     //modelo: 'modelo2'
   }
+
+
 
   constructor() { }
 
