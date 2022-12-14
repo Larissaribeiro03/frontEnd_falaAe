@@ -31,18 +31,35 @@ export class EntrarComponent implements OnInit{
   login() {
     const email = this.loginForm.get('email')?.value;
     const senha = this.loginForm.get('senha')?.value;
-
-    this.authService.authenticate(email, senha)
-    .subscribe(
-      () => this.router.navigate(['/listarPostagem']),
-      err => {
-        console.log(err);
-        this.loginForm.reset();
-        this.platformDetectorService.isPlatformBrowser() &&
-          this.emailInput.nativeElement.focus();
-        alert('Senha inválida, tente novamente.');
+    this.authService.authenticate(email, senha).then((data) => {
+      if (data['id'] === undefined ) {
+          alert('Usuário inválido');
       }
-    );
+      else {
+        const id = data.id;
+        this.router.navigate(['/listarPostagem']);
+      }
+
+    })
+
+    // this.authService.authenticate(email, senha)
+    // .subscribe(
+    //   () => {
+    //     this.router.navigate(['/listarPostagem']);
+
+    //     // const result1 = Object.keys(resp);
+    //     // console.log(result1);
+    //     // console.log(resp["source"]);
+
+    //   },
+    //   err => {
+    //     console.log(err);
+    //     this.loginForm.reset();
+    //     this.platformDetectorService.isPlatformBrowser() &&
+    //       this.emailInput.nativeElement.focus();
+    //     alert('Senha inválida, tente novamente.');
+    //   }
+    // );
   }
 
 }

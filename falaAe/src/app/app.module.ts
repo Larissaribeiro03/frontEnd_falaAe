@@ -15,6 +15,7 @@ import { ExcluirPostagemComponent } from './componentes/postagens/excluir-postag
 import { EditarPostagemComponent } from './componentes/postagens/editar-postagem/editar-postagem.component';
 import { EntrarComponent } from './componentes/entrar/entrar.component';
 import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component';
+import { MenuComponent } from './componentes/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +27,15 @@ import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component'
     PostagemComponent,
     ExcluirPostagemComponent,
     EditarPostagemComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HomeModule
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

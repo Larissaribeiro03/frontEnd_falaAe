@@ -12,10 +12,10 @@ export class ExcluirPostagemComponent implements OnInit {
 
   pensamento: Pensamento = {
     id: 0,
-    post: ''
+    post: '',
     // conteudo: '',
     // autoria: '',
-    // modelo: ''
+    modelo: ''
   }
 
   constructor(

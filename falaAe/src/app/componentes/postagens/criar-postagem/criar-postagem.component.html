@@ -4,14 +4,6 @@
     </header>
     <form>
         <label for="pensamento">Pensamento</label>
-        <!-- COPIA<input
-            type="textarea"
-            class="input"
-            id="pensamento"
-            name="pensamento"
-            placeholder="Digite seu pensamento"
-            [(ngModel)]="pensamento.conteudo"
-        > -->
         <input
             type="textarea"
             class="input"
@@ -20,40 +12,16 @@
             placeholder="Digite seu pensamento"
             [(ngModel)]="pensamento.post"
         >
-
-        <!-- <label for="autoria">Autoria</label> -->
-        <!--  COPIA<input
-            type="text"
-            class="input"
-            id="autoria"
-            name="autoria"
-            placeholder="Digite seu autoria"
-            [(ngModel)]="pensamento.autoria"
-        > -->
-        <!-- <input
-            type="text"
-            class="input"
-            id="autoria"
-            name="autoria"
-            placeholder="Digite seu autoria"
-        > -->
-
         <label for="modelo">Selecione o modelo do card:</label>
         <div class="container-radio">
             <div class="radio-modelo">
                 <label for="modelo1">
-                    <!-- COPIA<input
-                        type="radio"
-                        id="modelo1"
-                        value="modelo1"
-                        name="modelo-card"
-                        [(ngModel)]="pensamento.modelo"
-                    > -->
                     <input
                         type="radio"
                         id="modelo1"
                         value="modelo1"
                         name="modelo-card"
+                        [(ngModel)]="pensamento.modelo"
                     >
                     <div class="custom-radio">
                         <span></span>
@@ -63,26 +31,18 @@
                 Prévia:
                 <div class="modelo modelo1 ff-roboto-mono">
                     <img src="../../../../assets/Imagens/modelo1.png" alt="Aspas azuis">
-                    <!-- <p class="conteudo">{{ pensamento.conteudo }}</p> -->
-                    <!-- <p class="autoria"><b>{{ pensamento.autoria }}</b></p> -->
                     <p class="autoria"><b>{{ pensamento.post }}</b></p>
                 </div>
             </div>
 
             <div class="radio-modelo">
                 <label for="modelo2">
-                    <!-- COPIA<input
-                        type="radio"
-                        id="modelo2"
-                        value="modelo2"
-                        name="modelo-card"
-                        [(ngModel)]="pensamento.modelo"
-                    > -->
                     <input
                         type="radio"
                         id="modelo2"
                         value="modelo2"
                         name="modelo-card"
+                        [(ngModel)]="pensamento.modelo"
                     >
                     <div class="custom-radio">
                         <span></span>
@@ -92,8 +52,6 @@
                 Prévia:
                 <div class="modelo modelo2 ff-roboto-mono">
                     <img src="../../../../assets/Imagens/modelo2.png" alt="Aspas azul claro">
-                    <!--<p class="conteudo">{{ pensamento.conteudo }}</p>
-                    <p class="autoria"><b>{{ pensamento.autoria }}</b></p>-->
                     <p class="autoria"><b>{{ pensamento.post }}</b></p>
                 </div>
             </div>
@@ -105,14 +63,8 @@
                         id="modelo3"
                         value="modelo3"
                         name="modelo-card"
-                    >
-                    <!--COPIA<input
-                        type="radio"
-                        id="modelo3"
-                        value="modelo3"
-                        name="modelo-card"
                         [(ngModel)]="pensamento.modelo"
-                    >-->
+                    >
                     <div class="custom-radio">
                         <span></span>
                     </div>
@@ -121,8 +73,6 @@
                 Prévia:
                 <div class="modelo modelo3 ff-roboto-mono">
                     <img src="../../../../assets/Imagens/modelo3.png" alt="Aspas verde">
-                    <!-- <p class="conteudo">{{ pensamento.conteudo }}</p>
-                    <p class="autoria"><b>{{ pensamento.autoria }}</b></p> -->
                     <p class="autoria"><b>{{ pensamento.post }}</b></p>
                 </div>
             </div>

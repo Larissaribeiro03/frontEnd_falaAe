@@ -1,8 +1,8 @@
 <!--<div class="pensamento {{ pensamento.modelo }} ff-roboto-mono" [ngClass]="larguraPensamento()">-->
-<div class="pensamento ff-roboto-mono" [ngClass]="larguraPensamento()">
-   <!-- <img src="../../../../assets/Imagens/{{ pensamento.modelo }}.png" alt="Aspas coloridas">-->
+<div class="pensamento {{ pensamento.modelo }} ff-roboto-mono" [ngClass]="larguraPensamento()">
+   <img src="../../../../assets/Imagens/{{ pensamento.modelo }}.png" alt="Aspas coloridas">
     <!--<p class="conteudo">{{ pensamento.dataPost }}</p>-->
-    <p class="autoria"><b>{{ pensamento.post }}</b></p>
+    <p class="conteudo"><b>{{ pensamento.post }}</b></p>
     <div class="acoes">
         <button class="botao-editar">
             <img src="../../../../assets/Imagens/icone-editar.png" routerLink="/postagens/editarPostagem/{{ pensamento.id }}" alt="Ícone de editar">

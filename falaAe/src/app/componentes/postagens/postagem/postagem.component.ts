@@ -10,14 +10,15 @@ import { Pensamento } from './postagem';
 export class PostagemComponent implements OnInit {
 
   @Input() user: UserLogin = {
-    id:1
+    id:11
   }
 
   @Input() pensamento: Pensamento = {
     id: 0,
     //dataPost: this.pensamento.dataPost,
     post:'',
-    user: this.user
+    user: this.user,
+    modelo: ''
     // user: new Map<'id',1 >
     //conteudo: 'I love angular',
     //autoria: 'Larissa',

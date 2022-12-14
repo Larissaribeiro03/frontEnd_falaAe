@@ -12,12 +12,13 @@ import { Router } from '@angular/router';
 export class CriarPostagemComponent {
 
   user: UserLogin = {
-    id: 1
+    id: 11
   }
 
   pensamento: Pensamento = {
     post: '',
-    user: this.user
+    user: this.user,
+    modelo: ''
     // user: Map
     // conteudo: '',
     // autoria: '',
