@@ -1,6 +1,6 @@
 export interface UserLogin {
     id?: number
-    nickname: String
+    nickname?: string
     status: String
     //dataPost: Date
     // post: string

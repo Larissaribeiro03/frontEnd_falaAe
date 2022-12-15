@@ -6,14 +6,13 @@
     <p style="color: #6C4AB6;" class="conteudo"><b>{{ pensamento.user.status }}</b></p>
     <p style="font-size: 12px;" class="conteudo"><b><i>{{ pensamento.dataPost }}</i></b></p>
     <p class="conteudo"><b>{{ pensamento.post }}</b></p>
-    <p class="conteudo"><b>{{ pensamento.id }}</b></p>
     
     <div class="acoes">
-        <button class="botao-curti" (click)="criarReaction1()">
+        <button class="botao-curti" (click)="curtiPensamento()">
             <img style="width: 30px;" src="../../../../assets/Imagens/1.png"  alt="Ícone de curti">
             <p>{{pensamento.gostei}}</p>
         </button>
-        <button class="botao-nao-curti" >
+        <button class="botao-nao-curti" (click)="naocurtiPensamento()" >
             <img style="width: 30px;" src="../../../../assets/Imagens/2.png"  alt="Ícone de nao-curti">
             <p>{{pensamento.naoGostei}}</p>
         </button>

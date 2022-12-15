@@ -1,7 +1,7 @@
-
+<div class="d-flex justify-content-center">
+<div class="col-md-6">
 <h4 style="color: white;" class="text-center">Login</h4>
-
-<form [formGroup]="loginForm" class="form mt-4" (submit)="login()" >
+<form [formGroup]="loginForm" class="form" (submit)="login()" >
 
     <div class="form-group">
         <input  
@@ -28,7 +28,9 @@
         </ap-alertas>
     </div>
 
-    <button
+    <button style="  background: #6C4AB6;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+    color: white;"
         [disabled]="loginForm.invalid"
         type="submit"
         class="btn btn-block">
@@ -37,4 +39,7 @@
 
 </form>
 
-<p>Não possui cadastro?<a>Registre-se aqui</a></p>
+<p>Não possui cadastro?<a [routerLink]="['/cadastrar']">Registre-se aqui</a></p>
+</div>
+
+</div>
