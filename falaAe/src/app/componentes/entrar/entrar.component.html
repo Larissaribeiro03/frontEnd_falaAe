@@ -8,18 +8,18 @@
             #emailInput
             formControlName="email"
             class="form-control"
-            placeholder="user name"
+            placeholder="email"
             autofocus>
         <ap-alertas
             *ngIf="loginForm.get('email')?.errors?.['required']"
-            text="Nome do usuário é obrigatório">
+            text="Email é obrigatório">
         </ap-alertas>
     </div>
 
     <div class="form-group">
         <input 
             formControlName="senha"
-            type="senha"
+            type="password"
             class="form-control"
             placeholder="senha">
         <ap-alertas
@@ -39,7 +39,7 @@
 
 </form>
 
-<p>Não possui cadastro?<a [routerLink]="['/cadastrar']">Registre-se aqui</a></p>
+<p>Não possui cadastro? <a [routerLink]="['/cadastrar']">Registre-se aqui</a></p>
 </div>
 
 </div>

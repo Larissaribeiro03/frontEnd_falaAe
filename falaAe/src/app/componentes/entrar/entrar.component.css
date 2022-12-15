@@ -3,3 +3,9 @@ input {
   box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
   border-radius: 33px;
 }
+button {
+  background: #6C4AB6;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+  color: white;
+  border-radius: 33px;
+}
