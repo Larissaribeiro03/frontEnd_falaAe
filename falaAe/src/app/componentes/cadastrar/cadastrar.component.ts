@@ -1,13 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-cadastrar',
-  templateUrl: './cadastrar.component.html',
-  styleUrls: ['./cadastrar.component.css']
+  templateUrl: './cadastrar.component.html'
 })
-export class CadastrarComponent implements OnInit {
+export class CadastrarComponent {
 
   //user: User = new User
   //confirmarSenha: string
@@ -20,7 +17,7 @@ export class CadastrarComponent implements OnInit {
   // ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    //window.scroll(0,0)
   }
 
   // confirmSenha(event: any) {

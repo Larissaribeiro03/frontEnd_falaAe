@@ -27,7 +27,6 @@ import { MenuComponent } from './componentes/menu/menu.component';
     PostagemComponent,
     ExcluirPostagemComponent,
     EditarPostagemComponent,
-    CadastrarComponent,
     MenuComponent
   ],
   imports: [

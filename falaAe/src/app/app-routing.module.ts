@@ -1,3 +1,4 @@
+import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component';
 import { EntrarComponent } from './componentes/entrar/entrar.component';
 import { EditarPostagemComponent } from './componentes/postagens/editar-postagem/editar-postagem.component';
 import { ExcluirPostagemComponent } from './componentes/postagens/excluir-postagem/excluir-postagem.component';
@@ -8,13 +9,21 @@ import { ListarPostagemComponent } from './componentes/postagens/listar-postagem
 
 const routes: Routes = [
 
+  // {path: '',
+  //  redirectTo: 'entrar',
+  //  pathMatch: 'full'
+  // },
   {path: '',
-   redirectTo: 'entrar',
+   component: EntrarComponent,
    pathMatch: 'full'
   },
   {
     path: 'entrar',
     component: EntrarComponent
+  },
+  {
+    path: 'cadastrar',
+    component: CadastrarComponent
   },
   {
     path: '',
