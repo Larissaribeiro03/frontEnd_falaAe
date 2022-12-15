@@ -1,13 +1,15 @@
-import { UserLogin } from './userLogin';
+import { UserLogin } from "./userLogin"
+
 
 export interface Pensamento {
 
     id?: number
-    //dataPost: Date
+    dataPost: Date
     post: string
-    user?: UserLogin
+    user: UserLogin
     modelo: string
-    // user: Map<string, number>
+    gostei: number
+    naoGostei: number
     //conteudo: string
     //autoria: string
     //modelo: string

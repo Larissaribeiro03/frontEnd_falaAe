@@ -16,6 +16,12 @@ export class PensamentoService {
     return this.http.get<Pensamento[]>(this.API)
   }
 
+/*  listarRections(): Observable<Pensamento[]> {
+    const reacoes = "/reactions"
+    const url = `${this.API}${reacoes}`
+    return this.http.get<Pensamento[]>(url)
+  }*/
+
   criar(pensamento: Pensamento): Observable<Pensamento>{
     return this.http.post<Pensamento>(this.API, pensamento)
   }
@@ -34,5 +40,6 @@ export class PensamentoService {
     const url = `${this.API}/${id}`
     return this.http.get<Pensamento>(url)
   }
+
 
 }

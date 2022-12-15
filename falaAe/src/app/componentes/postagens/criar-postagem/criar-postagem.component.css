@@ -16,7 +16,7 @@
   }
 
   .criar-pensamentos form {
-    background: #C4EDFF;
+    background: rgba(255, 255, 255, 0.35);
 
     border: none;
     border-radius: 20px;
@@ -82,15 +82,15 @@
   }
 
   .modelo1 {
-    box-shadow: 8px 8px 0px #154580;
+    box-shadow: 8px 8px 0px #8D72E1;
   }
 
   .modelo2 {
-    box-shadow: 8px 8px 0px #6BD1FF;
+    box-shadow: 8px 8px 0px #B9E0FF;
   }
 
   .modelo3 {
-    box-shadow: 8px 8px 0px #84EEC1;
+    box-shadow: 8px 8px 0px #8D9EFF;
   }
 
   input[type='radio'] {
@@ -132,4 +132,15 @@
 
   input[type='radio']:checked+.custom-radio span {
     background: #154580;
+  }
+
+  input {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 33px;
+  }
+  button {
+    background: #6C4AB6;
+    color: white;
+    border-color: blueviolet;
   }

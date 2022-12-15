@@ -12,13 +12,18 @@ import { Router } from '@angular/router';
 export class CriarPostagemComponent {
 
   user: UserLogin = {
-    id: 11
+    id: Number(localStorage.getItem("id")),
+    nickname: '',
+    status: ''
   }
 
   pensamento: Pensamento = {
     post: '',
     user: this.user,
-    modelo: ''
+    modelo: '',
+    dataPost: new Date(),
+    gostei: 0,
+    naoGostei: 0
     // user: Map
     // conteudo: '',
     // autoria: '',

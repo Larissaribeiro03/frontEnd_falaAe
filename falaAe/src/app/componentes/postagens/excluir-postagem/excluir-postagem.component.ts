@@ -2,6 +2,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PensamentoService } from './../pensamento.service';
 import { Pensamento } from './../postagem/postagem';
 import { Component, OnInit } from '@angular/core';
+import { UserLogin } from './../postagem/userLogin';
 
 @Component({
   selector: 'app-excluir-postagem',
@@ -10,12 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExcluirPostagemComponent implements OnInit {
 
+  user: UserLogin = {
+    id: Number(localStorage.getItem("id")),
+    nickname: '',
+    status: ''
+  }
   pensamento: Pensamento = {
     id: 0,
     post: '',
+    user: this.user,
+    dataPost: new Date(),
     // conteudo: '',
     // autoria: '',
-    modelo: ''
+    modelo: '',
+    gostei: 0,
+    naoGostei: 0
   }
 
   constructor(

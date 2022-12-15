@@ -1,5 +1,5 @@
 main {
-  background: url(/assets/imagens/background-completo.png);
+  background: linear-gradient(180deg, #8D72E1 0%, #B9E0FF 45.83%, #B9E0FF 100%);
   background-size: cover;
   min-height: 60vh;
 }

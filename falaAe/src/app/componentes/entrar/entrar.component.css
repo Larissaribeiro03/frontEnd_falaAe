@@ -1,9 +1,18 @@
 #img-bg{
     background-image: url('https://i.imgur.com/d5bMdDJ.jpg');
-
+  
     min-height: 695px;
-
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+input {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 33px;
+}
+button {
+  background: #6C4AB6;
+  color: white;
+}

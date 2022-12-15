@@ -1,6 +1,11 @@
 import { UserLogin } from './userLogin';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { Pensamento } from './postagem';
+import { Reactions } from './reactions';
+import { ReactionService } from '../reacoes.service';
+import { PensamentoService } from './../pensamento.service';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-postagem',
@@ -9,28 +14,50 @@ import { Pensamento } from './postagem';
 })
 export class PostagemComponent implements OnInit {
 
-  @Input() user: UserLogin = {
-    id:11
-  }
-
-  @Input() pensamento: Pensamento = {
-    id: 0,
-    //dataPost: this.pensamento.dataPost,
-    post:'',
-    user: this.user,
-    modelo: ''
-    // user: new Map<'id',1 >
-    //conteudo: 'I love angular',
-    //autoria: 'Larissa',
-    //modelo: 'modelo2'
-  }
+  constructor(   
+    private service2: PensamentoService, 
+    private service: ReactionService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
 
+    @Input() user: UserLogin = {
+      id: Number(localStorage.getItem("id")),
+      nickname: '',
+      status: ''
+    }
+  
+    @Input() pensamento: Pensamento = {
+      id: 0,
+      dataPost: new Date(),
+      post:'',
+      user: this.user,
+      modelo: '',
+      gostei: 0,
+      naoGostei: 0
+      // user: new Map<'id',1 >
+      //conteudo: 'I love angular',
+      //autoria: 'Larissa',
+      //
+    }
+    ngOnInit(): void {
+    }
 
-  constructor() { }
+    @Input() reaction1: Reactions = {
+      dataReaction: new Date(),
+      post: this.pensamento,
+      user: this.user,
+      tipoReaction: 1
 
-  ngOnInit(): void {
-  }
+    }
+
+    @Input() reaction2: Reactions = {
+      dataReaction: new Date(),
+      post: this.pensamento,
+      user: this.user,
+      tipoReaction: 2
+    }
+
 
   larguraPensamento(): string {
     console.log(this.pensamento.post.length)
@@ -40,6 +67,17 @@ export class PostagemComponent implements OnInit {
     return 'pensamento-p'
   }
 
+  criarReaction1() {
+    this.service.criarReactions(this.reaction1).subscribe(() => {
+      this.router.navigate(['/listarPostagem'])
+      console.log(this.pensamento.id)
+    })
+  }
+  criarReaction2() {
+    this.service.criarReactions(this.reaction2).subscribe(() => {
+      this.router.navigate(['/listarPostagem'])
+    })
+  }
   // larguraPensamento(): string {
   //   console.log(this.pensamento.conteudo.length)
   //   if(this.pensamento.conteudo.length >= 256) {
