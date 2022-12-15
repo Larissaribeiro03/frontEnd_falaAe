@@ -1,15 +1,16 @@
 <section class="container criar-pensamentos ff-inter">
     <header class="header">
-        <h2>Adicione uma <br> nova postagem:</h2>
+        <h2>Adicione uma<br> nova postagem:</h2>
     </header>
-    <form>
-        <label for="pensamento">Pensamento</label>
+    <form >
+        <p>{{pensamento.user.nickname}}</p>
+        <label for="pensamento">Mensagem</label>
         <input
             type="textarea"
             class="input"
             id="pensamento"
             name="pensamento"
-            placeholder="Digite seu pensamento"
+            placeholder="Digite sua mensagem"
             [(ngModel)]="pensamento.post"
         >
         <label for="modelo">Selecione o modelo do card:</label>
@@ -30,7 +31,7 @@
                 </label>
                 Prévia:
                 <div class="modelo modelo1 ff-roboto-mono">
-                    <img src="../../../../assets/Imagens/modelo1.png" alt="Aspas azuis">
+                    <!--<img src="../../../../assets/Imagens/modelo1.png" alt="Aspas azuis">-->
                     <p class="autoria"><b>{{ pensamento.post }}</b></p>
                 </div>
             </div>
@@ -51,7 +52,7 @@
                 </label>
                 Prévia:
                 <div class="modelo modelo2 ff-roboto-mono">
-                    <img src="../../../../assets/Imagens/modelo2.png" alt="Aspas azul claro">
+                    <!--<img src="../../../../assets/Imagens/modelo2.png" alt="Aspas azul claro">-->
                     <p class="autoria"><b>{{ pensamento.post }}</b></p>
                 </div>
             </div>
@@ -72,7 +73,7 @@
                 </label>
                 Prévia:
                 <div class="modelo modelo3 ff-roboto-mono">
-                    <img src="../../../../assets/Imagens/modelo3.png" alt="Aspas verde">
+                    <!--<img src="../../../../assets/Imagens/modelo3.png" alt="Aspas verde">-->
                     <p class="autoria"><b>{{ pensamento.post }}</b></p>
                 </div>
             </div>

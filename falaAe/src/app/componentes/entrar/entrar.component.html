@@ -1,9 +1,11 @@
-<h4 class="text-center">Login</h4>
+
+<h4 style="color: white;" class="text-center">Login</h4>
 
 <form [formGroup]="loginForm" class="form mt-4" (submit)="login()" >
 
     <div class="form-group">
-        <input #emailInput
+        <input  
+            #emailInput
             formControlName="email"
             class="form-control"
             placeholder="user name"
@@ -15,7 +17,7 @@
     </div>
 
     <div class="form-group">
-        <input
+        <input 
             formControlName="senha"
             type="senha"
             class="form-control"
@@ -29,7 +31,7 @@
     <button
         [disabled]="loginForm.invalid"
         type="submit"
-        class="btn btn-primary btn-block">
+        class="btn btn-block">
         Entrar
     </button>
 

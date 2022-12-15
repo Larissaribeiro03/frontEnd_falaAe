@@ -2,6 +2,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { PensamentoService } from './../pensamento.service';
 import { Component, OnInit } from '@angular/core';
 import { Pensamento } from '../postagem/postagem';
+import { UserLogin } from './../postagem/userLogin';
 
 @Component({
   selector: 'app-editar-postagem',
@@ -10,12 +11,21 @@ import { Pensamento } from '../postagem/postagem';
 })
 export class EditarPostagemComponent implements OnInit{
 
+  user: UserLogin = {
+    id: Number(localStorage.getItem("id")),
+    nickname: '',
+    status: ''
+  }
   pensamento: Pensamento = {
     id: 0,
     post: '',
+    user: this.user,
+    dataPost: new Date(),
     // conteudo: '',
     // autoria: '',
-    modelo: ''
+    modelo: '',
+    gostei: 0,
+    naoGostei: 0
   }
   constructor(
     private service: PensamentoService,
