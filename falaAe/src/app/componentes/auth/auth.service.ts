@@ -30,4 +30,22 @@ export class AuthService {
     })
 
   }
+
+  cadastrar(email: String,nickname: String, status: String, senha: String) {
+    //const resp = this.http.post(API + '/user/validarSenha',  {email, senha} )
+    //return resp;
+    const body = {email: email, nickname: nickname, status: status, senha: senha}
+    return axios.post(API + '/user/', body)
+    .then((resp) => {
+      console.log(resp.data);
+      return resp.data;
+    }).catch((err) => {
+        console.log(err);
+        return {
+          message: 'Nao conseguir criar.'
+        }
+
+    })
+
+  }
 }

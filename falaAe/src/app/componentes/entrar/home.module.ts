@@ -8,8 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
-        EntrarComponent,
-        CadastrarComponent
+        EntrarComponent
     ],
     imports: [
         CommonModule,
