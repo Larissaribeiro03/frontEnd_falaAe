@@ -1,4 +1,4 @@
-import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component';
+
 import { EntrarComponent } from './componentes/entrar/entrar.component';
 import { EditarPostagemComponent } from './componentes/postagens/editar-postagem/editar-postagem.component';
 import { ExcluirPostagemComponent } from './componentes/postagens/excluir-postagem/excluir-postagem.component';
