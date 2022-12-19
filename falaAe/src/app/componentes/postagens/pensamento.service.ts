@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pensamento } from './postagem/postagem';
 import { Observable } from 'rxjs';
+import { Reactions } from './postagem/reaction';
 
 @Injectable({
   providedIn: 'root'
@@ -16,14 +17,13 @@ export class PensamentoService {
     return this.http.get<Pensamento[]>(this.API)
   }
 
-/*  listarRections(): Observable<Pensamento[]> {
-    const reacoes = "/reactions"
-    const url = `${this.API}${reacoes}`
-    return this.http.get<Pensamento[]>(url)
-  }*/
-
   criar(pensamento: Pensamento): Observable<Pensamento>{
     return this.http.post<Pensamento>(this.API, pensamento)
+  }
+
+  criarReaction(idPost: number, tipoReaction: number, idUser: number): Observable<Reactions> {
+    const url = `${this.API}/${idPost}/${tipoReaction}/${idUser}`
+    return this.http.post<Reactions>(url, null)
   }
 
   editar(pensamento: Pensamento): Observable<Pensamento> {

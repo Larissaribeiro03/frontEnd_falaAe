@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { UserLogin } from '../postagens/postagem/userLogin';
 
 @Component({
   selector: 'app-menu',
@@ -6,10 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
+
+  nickname = localStorage.getItem("nickname");
   constructor(
 
-  ) { }
-
+    ) { }
   ngOnInit(): void {
 
   }

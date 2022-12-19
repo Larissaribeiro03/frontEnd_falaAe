@@ -11,6 +11,8 @@ export class ListarPostagemComponent implements OnInit {
 
   listaPensamentos: Pensamento[] = [];
 
+  nickname = localStorage.getItem("nickname");
+
   constructor(private service: PensamentoService) {
 
   }

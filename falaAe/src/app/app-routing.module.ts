@@ -6,6 +6,8 @@ import { CriarPostagemComponent } from './componentes/postagens/criar-postagem/c
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListarPostagemComponent } from './componentes/postagens/listar-postagem/listar-postagem.component';
+import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component';
+
 
 const routes: Routes = [
 
