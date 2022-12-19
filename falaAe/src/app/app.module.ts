@@ -13,8 +13,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { PostagemComponent } from './componentes/postagens/postagem/postagem.component';
 import { ExcluirPostagemComponent } from './componentes/postagens/excluir-postagem/excluir-postagem.component';
 import { EditarPostagemComponent } from './componentes/postagens/editar-postagem/editar-postagem.component';
-import { EntrarComponent } from './componentes/entrar/entrar.component';
-import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { CadastroModule } from './componentes/cadastrar/cadastro.module';
 

@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule} from '@angular
 })
 export class CadastrarComponent implements OnInit {
 
-  cadastrarForm: FormGroup;
+  cadastrarForm!: FormGroup;
   @ViewChild('emailInput') emailInput!: ElementRef<HTMLInputElement>;
 
   constructor(
